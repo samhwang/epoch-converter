@@ -1,5 +1,5 @@
 {
-  "name": "@samhwang/vite-react-starter-template",
+  "name": "@samhwang/epoch-converter",
   "version": "0.0.0",
   "private": true,
   "msw": {
@@ -12,14 +12,14 @@
     "prebuild": "rimraf dist",
     "build:only": "vite build",
     "typecheck": "tsc",
-    "build": "npm run typecheck && npm run build:only",
+    "build": "pnpm run typecheck && pnpm run build:only",
     "preview": "vite preview",
     "pretest": "rimraf coverage",
     "test": "vitest",
     "lint": "eslint --cache .",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "pnpm run lint --fix",
     "prettier": "prettier --cache --write .",
-    "format": "npm run lint:fix && npm run prettier"
+    "format": "pnpm run lint:fix && pnpm run prettier"
   },
   "dependencies": {
     "react": "^18.2.0",
