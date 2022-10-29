@@ -1,0 +1,63 @@
+{
+  "name": "@samhwang/vite-react-starter-template",
+  "version": "0.0.0",
+  "private": true,
+  "msw": {
+    "workerDirectory": "public"
+  },
+  "type": "module",
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "vite",
+    "prebuild": "rimraf dist",
+    "build:only": "vite build",
+    "typecheck": "tsc",
+    "build": "npm run typecheck && npm run build:only",
+    "preview": "vite preview",
+    "pretest": "rimraf coverage",
+    "test": "vitest",
+    "lint": "eslint --cache .",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier --cache --write .",
+    "format": "npm run lint:fix && npm run prettier"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "web-vitals": "^3.0.4"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^8.19.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/node": "^18.11.7",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "@vitejs/plugin-react": "^2.2.0",
+    "@vitest/coverage-c8": "^0.24.3",
+    "@vitest/ui": "^0.24.3",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jsdom": "^20.0.1",
+    "lint-staged": "^13.0.3",
+    "msw": "^0.47.4",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "tsx": "^3.11.0",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.1",
+    "vitest": "^0.24.3"
+  }
+}
