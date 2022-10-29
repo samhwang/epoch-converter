@@ -9,10 +9,12 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
+    "dev:tauri": "tauri dev",
     "prebuild": "rimraf dist",
     "build:only": "vite build",
     "typecheck": "tsc",
     "build": "pnpm run typecheck && pnpm run build:only",
+    "build:tauri": "tauri build",
     "preview": "vite preview",
     "pretest": "rimraf coverage",
     "test": "vitest",
@@ -27,6 +29,7 @@
     "web-vitals": "^3.0.4"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^1.1.1",
     "@testing-library/dom": "^8.19.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
